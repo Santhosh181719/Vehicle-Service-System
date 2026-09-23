@@ -5,6 +5,7 @@ A full-stack web application for managing vehicle service bookings.
 ## Technologies Used
 
 ### Frontend
+
 - React.js
 - Vite
 - HTML
@@ -12,6 +13,7 @@ A full-stack web application for managing vehicle service bookings.
 - JavaScript
 
 ### Backend
+
 - Java
 - Spring Boot
 - Spring Security
@@ -20,6 +22,7 @@ A full-stack web application for managing vehicle service bookings.
 - Hibernate
 
 ### Database
+
 - MySQL
 
 ## Features
@@ -34,11 +37,13 @@ A full-stack web application for managing vehicle service bookings.
 
 ## System Architecture
 
-React Frontend → Spring Boot REST API → MySQL Database
-
-## API Modules
-
-- Authentication API
-- User API
-- Vehicle API
-- Booking API
+```text
+React.js Frontend
+       ↓
+HTTP / JSON
+       ↓
+Spring Boot REST API
+       ↓
+JPA / Hibernate
+       ↓
+MySQL Database
