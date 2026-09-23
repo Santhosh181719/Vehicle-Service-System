@@ -1,0 +1,794 @@
+/* =========================
+   PAGE
+========================= */
+
+.vehicles-page {
+    min-height: 100vh;
+    width: 100%;
+    background: #f5f7fa;
+    color: #111827;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.vehicles-nav {
+    width: 100%;
+    height: 76px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 5%;
+
+    gap: 50px;
+}
+
+.vehicles-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    text-decoration: none;
+    color: #111827;
+
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 9px;
+
+    background: #111827;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.brand-name {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.brand-subtitle {
+    font-size: 10px;
+    color: #9ca3af;
+    margin-top: 1px;
+}
+
+.vehicles-nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    flex: 1;
+}
+
+.vehicles-nav-links a {
+    text-decoration: none;
+
+    color: #6b7280;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.vehicles-nav-links a:hover {
+    color: #111827;
+}
+
+.vehicles-nav-links a.active {
+    color: #f59e0b;
+}
+
+.logout-btn {
+    border: none;
+    background: transparent;
+
+    color: #6b7280;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.vehicles-content {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 55px 30px 70px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.vehicles-header {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+.page-label {
+    color: #f59e0b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 9px;
+}
+
+.vehicles-header h1 {
+    color: #111827;
+
+    font-size: 38px;
+    line-height: 1.15;
+
+    margin-bottom: 9px;
+}
+
+.vehicles-header p:last-child {
+    color: #6b7280;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+.add-vehicle-btn {
+    border: none;
+
+    background: #f59e0b;
+    color: #ffffff;
+
+    padding: 13px 20px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+.add-vehicle-btn:hover {
+    background: #d97706;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+.success-message,
+.error-message {
+    padding: 13px 17px;
+
+    border-radius: 9px;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.success-message {
+    background: #ecfdf5;
+    color: #047857;
+
+    border: 1px solid #a7f3d0;
+}
+
+.error-message {
+    background: #fef2f2;
+    color: #b91c1c;
+
+    border: 1px solid #fecaca;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.vehicles-loading {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    min-height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #6b7280;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.vehicles-empty {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    min-height: 350px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+.empty-car-icon {
+    font-size: 55px;
+
+    margin-bottom: 18px;
+}
+
+.vehicles-empty h2 {
+    color: #111827;
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.vehicles-empty p {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   VEHICLE LIST
+========================= */
+
+.vehicle-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.vehicle-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    padding: 22px 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    transition: 0.2s;
+}
+
+.vehicle-card:hover {
+    border-color: #d1d5db;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.vehicle-card-left {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    min-width: 0;
+}
+
+.vehicle-icon-box {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 12px;
+
+    background: #f3f4f6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 36px;
+
+    flex-shrink: 0;
+}
+
+.vehicle-card-info {
+    min-width: 0;
+}
+
+.vehicle-title-row {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 7px;
+}
+
+.vehicle-title-row h2 {
+    color: #111827;
+
+    font-size: 19px;
+
+    margin: 0;
+}
+
+.vehicle-title-row span {
+    background: #fff7ed;
+    color: #c2410c;
+
+    padding: 4px 8px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.vehicle-number {
+    color: #374151;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 5px;
+}
+
+.vehicle-owner {
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.vehicle-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+.service-btn,
+.edit-btn,
+.delete-btn {
+    border-radius: 7px;
+
+    padding: 9px 13px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.service-btn {
+    background: #111827;
+    color: #ffffff;
+}
+
+.service-btn:hover {
+    background: #1f2937;
+}
+
+.edit-btn {
+    border: 1px solid #d1d5db;
+
+    background: #ffffff;
+    color: #374151;
+}
+
+.edit-btn:hover {
+    background: #f9fafb;
+}
+
+.delete-btn {
+    border: 1px solid #fecaca;
+
+    background: #ffffff;
+    color: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #fef2f2;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+.vehicle-modal {
+    width: 100%;
+    max-width: 480px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   MODAL HEADER
+========================= */
+
+.modal-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 25px;
+}
+
+.modal-header p {
+    color: #f59e0b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+
+    margin-bottom: 5px;
+}
+
+.modal-header h2 {
+    color: #111827;
+
+    font-size: 23px;
+
+    margin: 0;
+}
+
+.close-modal {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    background: #f3f4f6;
+
+    color: #374151;
+
+    border-radius: 7px;
+
+    font-size: 23px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    background: #e5e7eb;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #374151;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    height: 44px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    padding: 0 13px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #f59e0b;
+
+    box-shadow:
+        0 0 0 3px rgba(245, 158, 11, 0.12);
+}
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =========================
+   MODAL ACTIONS
+========================= */
+
+.modal-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.cancel-btn,
+.save-btn {
+    padding: 11px 17px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.cancel-btn {
+    border: 1px solid #d1d5db;
+
+    background: #ffffff;
+
+    color: #374151;
+}
+
+.cancel-btn:hover {
+    background: #f9fafb;
+}
+
+.save-btn {
+    border: none;
+
+    background: #f59e0b;
+
+    color: #ffffff;
+}
+
+.save-btn:hover {
+    background: #d97706;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .vehicles-nav {
+        padding: 0 25px;
+
+        gap: 25px;
+    }
+
+    .vehicles-nav-links {
+        gap: 18px;
+    }
+
+    .vehicle-card {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .vehicle-actions {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .vehicles-nav {
+        height: auto;
+
+        min-height: 70px;
+
+        padding: 14px 18px;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .vehicles-nav-links {
+        order: 3;
+
+        width: 100%;
+
+        overflow-x: auto;
+
+        padding-bottom: 3px;
+
+        gap: 20px;
+    }
+
+    .logout-btn {
+        margin-left: auto;
+    }
+
+    .vehicles-content {
+        padding: 35px 16px 50px;
+    }
+
+    .vehicles-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        margin-bottom: 25px;
+    }
+
+    .vehicles-header h1 {
+        font-size: 32px;
+    }
+
+    .vehicle-card {
+        padding: 18px;
+    }
+
+    .vehicle-card-left {
+        width: 100%;
+    }
+
+    .vehicle-icon-box {
+        width: 58px;
+        height: 58px;
+
+        font-size: 30px;
+    }
+
+    .vehicle-title-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .vehicle-actions {
+        flex-wrap: wrap;
+    }
+
+    .service-btn,
+    .edit-btn,
+    .delete-btn {
+        flex: 1;
+
+        text-align: center;
+    }
+
+    .vehicle-modal {
+        padding: 22px;
+
+        border-radius: 13px;
+    }
+
+}
